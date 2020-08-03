@@ -3,7 +3,7 @@
 
 使用方案1：<br>
 1.请保证已加载以下相关文件：<br>
-(1).A3Shape相关<br>
+(1).A3Shape与Yutils相关文件<br>
 (2).Kutils.lua与Kfunc.lua放入Aegisub安装目录下的include文件夹<br>
 (3).kara-templater.lua放入Aegisub安装目录下的autoload文件夹<br>
 2.根据手册使用对应模块
