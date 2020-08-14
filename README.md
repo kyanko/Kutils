@@ -6,9 +6,10 @@
 (1).A3Shape与Yutils相关文件<br>
 (2).Kutils.lua与Kfunc.lua放入Aegisub安装目录下的include文件夹<br>
 (3).kara-templater.lua放入Aegisub安装目录下的autoload文件夹<br>
-2.根据手册使用对应模块
+2.按需求下载对应Aegisub：选择是否加载SciLua<br>
+3.根据手册使用对应模块
 
 使用方案2：<br>
-下载文件名为Kutils的压缩包，解压，使用内含的Aegisub<br>
+下载文件名为Kutils的压缩包，解压,替换对应文件<br>
 注：压缩包内文件版本会尽量与方案1中的文件同步，但为了以防万一，还请事先进行对应文件的替换
 
