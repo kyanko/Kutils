@@ -75,8 +75,7 @@ value=deter_value
 Kcurve={
 bezier=Kbezier,
 sin={uniform_speed=sin_uniform_speed},
-uniform_speed=curve_uniform_speed2,
-uniform_speed1=curve_uniform_speed
+uniform_speed=curve_uniform_speed
 }
 
 math.num=num
