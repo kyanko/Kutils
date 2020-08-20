@@ -1,4 +1,4 @@
-﻿--[[
+--[[
  Copyright (c) 2007, Niels Martin Hansen, Rodrigo Braz Monteiro
  All rights reserved.
 
@@ -641,14 +641,23 @@ function apply_templates(meta, styles, subs, templates)
 	-- start processing lines
 	local i, n = 0, #subs	
 	local l_i=0
+	local l_id=0
 	while i < n do
 		aegisub.progress.set(i/n*100)
 		i = i + 1
 		local l = subs[i]
+		if l.class=="dialogue"
+			then
+			l_id=l_id+1--文本行数(包含模板行)
+			l.i1=l_id
+			l.id2=i-l.i1
+		end
 		if l.class == "dialogue" and ((l.effect == "" and not l.comment) or l.effect:match("[Kk]araoke")) then
 			l_i=l_i+1
 			l.i = i
-			l.ir=l_i
+			l.ir=l_i--文本行数(不包含模板行)
+			l.id=l.i-l.ir
+			l.id1=l.i1-l.ir
 			l.comment = false
 			karaskel.preproc_line(subs, meta, styles, l)
 		    if i == 1 then
